@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* HablarloSana Design System */
+  --color-primary: #4B5874; /* Dusk Blue */
+  --color-secondary: #91A2BA; /* Cool Steel */
+  --color-accent: #ACC4DF; /* Powder Blue */
+  --color-bg: #FAF7F9; /* Snow */
+  --color-surface: #F6F6FA; /* Ghost White */
+  
+  --color-text: #2D3748;
+  --color-text-muted: #718096;
+
+  --font-sans: 'Outfit', sans-serif;
+  
+  --shadow-sm: 0 4px 6px rgba(75, 88, 116, 0.05);
+  --shadow-md: 0 10px 15px rgba(75, 88, 116, 0.08);
+  --shadow-lg: 0 20px 25px rgba(75, 88, 116, 0.1);
+  --shadow-hover: 0 25px 35px rgba(75, 88, 116, 0.15);
+
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.glass-panel {
+  background: rgba(246, 246, 250, 0.7); /* Ghost White with opacity */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-lg);
+}
