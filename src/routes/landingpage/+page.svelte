@@ -7,11 +7,7 @@
 </svelte:head>
 
 <main class="landing-page">
-	<!-- Dynamic Background Blobs -->
-	<div class="hero-bg">
-		<div class="blob blob-1"></div>
-		<div class="blob blob-2"></div>
-	</div>
+
 
 	<div class="container content">
 		<header class="header">
@@ -114,51 +110,7 @@
 		overflow: hidden;
 	}
 
-	.hero-bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		overflow: hidden;
-		background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
-	}
 
-	.blob {
-		position: absolute;
-		filter: blur(80px);
-		opacity: 0.4;
-		z-index: -1;
-		border-radius: 50%;
-		animation: float 10s infinite ease-in-out alternate;
-	}
-
-	.blob-1 {
-		top: -10%;
-		left: -10%;
-		width: 350px;
-		height: 350px;
-		background: var(--color-accent); /* Powder Blue */
-	}
-
-	.blob-2 {
-		bottom: -15%;
-		right: -10%;
-		width: 450px;
-		height: 450px;
-		background: var(--color-secondary); /* Cool Steel */
-		animation-delay: -5s;
-	}
-
-	@keyframes float {
-		0% {
-			transform: translate(0, 0) scale(1);
-		}
-		100% {
-			transform: translate(5%, 10%) scale(1.1);
-		}
-	}
 
 	.content {
 		position: relative;
