@@ -3,11 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>HablarloSana - Psicología y Bienestar</title>
-	<meta
-		name="description"
-		content="Agenda tu cita psicológica. Acompañamiento profesional para tu bienestar mental y emocional."
-	/>
+	<title>HablarloSana - Psicología</title>
 </svelte:head>
 
 <main class="landing-page">
@@ -19,7 +15,7 @@
 
 	<div class="container content">
 		<header class="header">
-			<h1 class="logo">Hablarlo<span>Sana</span></h1>
+			<img class="logo" src="/logo.png" alt="Hablarlo Sana" />
 		</header>
 
 		<section class="links-section">
@@ -170,7 +166,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 40px;
+		gap: 0px;
 	}
 
 	.header {
@@ -191,15 +187,10 @@
 	}
 
 	.logo {
-		font-size: 3.5rem;
-		font-weight: 700;
-		color: var(--color-primary); /* Dusk Blue */
-		letter-spacing: -1px;
-		margin-bottom: 12px;
-	}
-
-	.logo span {
-		color: var(--color-secondary); /* Cool Steel */
+		display: block;
+		width: clamp(220px, 55vw, 350px);
+		height: auto;
+		margin: 0 auto 12px;
 	}
 
 	.subtitle {
