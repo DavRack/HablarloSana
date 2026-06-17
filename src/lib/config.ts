@@ -13,3 +13,22 @@ export const contactInfo = {
 		address: 'psic.valentinagr@gmail.com'
 	}
 };
+
+export const faq = [
+	{
+		question: '¿Mi información es confidencial?',
+		answer: 'Absolutamente. Todo lo que hablamos en sesión es estrictamente confidencial y está protegido por el secreto profesional.'
+	},
+	{
+		question: '¿Cómo reservo una cita?',
+		answer: 'Puedes reservar una cita a través de nuestro enlace de WhatsApp en la página principal.'
+	},
+	{
+		question: '¿Ofrecen sesiones virtuales?',
+		answer: 'Sí, ofrecemos sesiones de psicología 100% virtuales.'
+	},
+	{
+		question: '¿Cuánto dura una sesión?',
+		answer: 'Cada sesión dura aproximadamente 60 minutos.'
+	},
+];
