@@ -165,7 +165,7 @@
 
 	.share-btn {
 		position: absolute;
-		top: 3em;
+		top: 2em;
 		right: 2em;
 		width: 44px;
 		height: 44px;
