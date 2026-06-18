@@ -15,6 +15,45 @@
 		</header>
 
 		<section class="links-section">
+			<!-- Social Icons -->
+			<div class="social-icons">
+				<a
+					href={contactInfo.instagram.link}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="social-icon instagram-icon"
+					aria-label="Instagram"
+				>
+					<svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24">
+						<path
+							d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+						/>
+					</svg>
+				</a>
+
+				<a
+					href={contactInfo.tiktok.link}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="social-icon tiktok-icon"
+					aria-label="TikTok"
+				>
+					<svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24">
+						<path
+							d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"
+						/>
+					</svg>
+				</a>
+
+				<a href="mailto:{contactInfo.email.address}" class="social-icon email-icon" aria-label="Email">
+					<svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24">
+						<path
+							d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+						/>
+					</svg>
+				</a>
+			</div>
+
 			<!-- WhatsApp / Reserva tu cita -->
 			<a
 				href="https://wa.me/{contactInfo.whatsapp.phoneNumber}?text={encodeURIComponent(
@@ -53,63 +92,34 @@
 				</div>
 			</a>
 
-			<!-- Instagram -->
-			<a
-				href={contactInfo.instagram.link}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="link-card glass-panel"
-			>
+			<!-- Sobre Mí -->
+			<a href="/sobre-mi" data-sveltekit-preload-code="eager" class="link-card glass-panel">
 				<div class="card-content">
-					<div class="icon instagram-icon">
+					<div class="icon about-icon">
 						<svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24">
-							<path
-								d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-							/>
+							<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
 						</svg>
 					</div>
 					<div class="text">
-						<h3>Instagram</h3>
+						<h3>Sobre Mí</h3>
 					</div>
 				</div>
 			</a>
 
-			<!-- TikTok -->
-			<a
-				href={contactInfo.tiktok.link}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="link-card glass-panel"
-			>
+			<!-- Experiencias -->
+			<a href="/experiencias" data-sveltekit-preload-code="eager" class="link-card glass-panel">
 				<div class="card-content">
-					<div class="icon tiktok-icon">
+					<div class="icon experiences-icon">
 						<svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24">
-							<path
-								d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"
-							/>
+							<path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/>
 						</svg>
 					</div>
 					<div class="text">
-						<h3>TikTok</h3>
+						<h3>Cuando hablarlo sana</h3>
 					</div>
 				</div>
 			</a>
 
-			<!-- Email -->
-			<a href="mailto:{contactInfo.email.address}" class="link-card glass-panel">
-				<div class="card-content">
-					<div class="icon email-icon">
-						<svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24">
-							<path
-								d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-							/>
-						</svg>
-					</div>
-					<div class="text">
-						<h3>Correo Electrónico</h3>
-					</div>
-				</div>
-			</a>
 		</section>
 	</div>
 </main>
@@ -157,7 +167,6 @@
 		display: block;
 		width: clamp(220px, 55vw, 350px);
 		height: auto;
-		margin: 0 auto 12px;
 	}
 
 	.subtitle {
@@ -250,7 +259,31 @@
 		box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 	}
 
-	.link-card:hover .icon.instagram-icon {
+	.social-icons {
+		display: flex;
+		justify-content: center;
+		gap: 16px;
+		margin-bottom: 8px;
+	}
+
+	.social-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 52px;
+		height: 52px;
+		border-radius: var(--radius-full);
+		background: rgba(255, 255, 255, 0.85);
+		color: var(--color-primary);
+		transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+	}
+
+	.social-icon:hover {
+		transform: translateY(-4px);
+	}
+
+	.social-icon.instagram-icon {
 		background: linear-gradient(
 			45deg,
 			#f09433 0%,
@@ -264,18 +297,30 @@
 	}
 
 	.link-card:hover .icon.faq-icon {
-		background: #8b5cf6;
+		background: var(--color-primary);
 		color: white;
-		box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+		box-shadow: 0 4px 12px rgba(20, 93, 160, 0.3);
 	}
 
-	.link-card:hover .icon.tiktok-icon {
+	.link-card:hover .icon.about-icon {
+		background: var(--color-primary);
+		color: white;
+		box-shadow: 0 4px 12px rgba(20, 93, 160, 0.3);
+	}
+
+	.link-card:hover .icon.experiences-icon {
+		background: var(--color-primary);
+		color: white;
+		box-shadow: 0 4px 12px rgba(20, 93, 160, 0.3);
+	}
+
+	.social-icon.tiktok-icon {
 		background: #000000;
 		color: white;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 	}
 
-	.link-card:hover .icon.email-icon {
+	.social-icon.email-icon {
 		background: #ea4335;
 		color: white;
 		box-shadow: 0 4px 12px rgba(234, 67, 53, 0.3);

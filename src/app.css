@@ -68,10 +68,10 @@ a {
 }
 
 .glass-panel {
-	background: rgba(246, 246, 250, 0.7); /* Ghost White with opacity */
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px);
+	background: rgba(255, 255, 255, 0.85); /* Solidified a bit since blur is gone */
 	border: 1px solid rgba(255, 255, 255, 0.6);
 	box-shadow: var(--shadow-md);
 	border-radius: var(--radius-lg);
 }
+
+
