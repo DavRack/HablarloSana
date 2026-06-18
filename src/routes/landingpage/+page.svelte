@@ -1,5 +1,29 @@
 <script lang="ts">
 	import { contactInfo } from '$lib/config';
+
+	async function handleShare() {
+		try {
+			if (navigator.share) {
+				await navigator.share({
+					title: 'HablarloSana - Psicología',
+					url: window.location.href
+				});
+			} else if (navigator.clipboard && navigator.clipboard.writeText) {
+				await navigator.clipboard.writeText(window.location.href);
+				alert('Enlace copiado al portapapeles');
+			} else {
+				const textArea = document.createElement("textarea");
+				textArea.value = window.location.href;
+				document.body.appendChild(textArea);
+				textArea.select();
+				document.execCommand("copy");
+				textArea.remove();
+				alert('Enlace copiado al portapapeles');
+			}
+		} catch (err) {
+			console.error('Share failed:', err);
+		}
+	}
 </script>
 
 <svelte:head>
@@ -7,7 +31,11 @@
 </svelte:head>
 
 <main class="landing-page">
-
+	<button class="share-btn glass-panel" on:click={handleShare} aria-label="Compartir">
+		<svg viewBox="0 0 24 24" fill="currentColor" height="20" width="20">
+			<path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+		</svg>
+	</button>
 
 	<div class="container content">
 		<header class="header">
@@ -135,7 +163,27 @@
 		overflow: hidden;
 	}
 
+	.share-btn {
+		position: absolute;
+		top: 3em;
+		right: 2em;
+		width: 44px;
+		height: 44px;
+		border-radius: var(--radius-full);
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-primary);
+		cursor: pointer;
+		z-index: 10;
+		transition: transform 0.2s ease;
+		padding: 0;
+	}
 
+	.share-btn:hover {
+		transform: scale(1.05);
+	}
 
 	.content {
 		position: relative;
